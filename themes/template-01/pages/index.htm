@@ -74,15 +74,25 @@
     >
     <style amp-custom>{% include 'assets/css/main.css' %}</style>    
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+      
+  
   </head>
-  <body>
-    <div class="block">
-      <span class="block__img">
-        <amp-img src="{{ assets.meme }}" width="476" height="313" layout="responsive" alt="Challenge Acepted!"></amp-img>
-      </span>
-      <h1 class="block__title">
-        {{ texts.welcome }}
-      </h1>
-    </div>
+  <body> 
+    
+    {% include './header.html' %}
+
+    {% include './banner.html' %}
+
+    {% include './highlights.html' %}
+
+    {% include './youtube.html' %}
+
+    {% include './footer.html' %}            
+     
+         
+
   </body>
 </html>

@@ -1,0 +1,18 @@
+{% set output = source('source/output/index.json') | json_decode %}
+{% set highlights = output.highlights %}
+
+
+<amp-carousel height="400" layout="fixed-height" type="carousel" role="region" class="highlights">
+
+    {% for item in highlights %}
+
+        <div class="highlights__item" style="background-image: url('{{item.image_home}}');">
+            <div>
+                <h2>{{item.title}}</h2>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+
+</amp-carousel>
